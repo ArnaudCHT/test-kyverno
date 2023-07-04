@@ -9,7 +9,7 @@ metadata:
     policies.kyverno.io/subject: Labels
     policies.kyverno.io/description: "Block Deployment if the labels are not set"
 spec:
-  validationFailureAction: Enforce
+  validationFailureAction: Audit
   rules:
   - name: check-labels
     match:

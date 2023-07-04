@@ -13,8 +13,8 @@ metadata:
     policies.kyverno.io/description: >-
       Encrption at rest is a security best practice. This policy ensures encryption is enabled for etcd in OpenShift clusters.
 spec:
-  validationFailureAction: Enforce
-  background: true
+  validationFailureAction: Audit
+  background: false
   rules:
   - name: check-etcd-encryption
     match:
