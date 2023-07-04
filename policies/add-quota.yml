@@ -30,15 +30,15 @@ spec:
             requests.memory: '16Gi'
             limits.cpu: '4'
             limits.memory: '16Gi'
-      exclude:
-        any:
-        - resources:
-            namespaces:
-            - "openshift*"
-            - kyverno
-            - falco
-            - etcd-backup
-            - "kube*"
-            - "vault*"
-            - keycloak
-            - grafana
+    exclude:
+      any:
+      - resources:
+          namespaces:
+          - "openshift*"
+          - kyverno
+          - falco
+          - etcd-backup
+          - "kube*"
+          - "vault*"
+          - keycloak
+          - grafana

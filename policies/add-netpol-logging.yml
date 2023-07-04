@@ -31,15 +31,15 @@ spec:
             - namespaceSelector:
                 matchLabels:
                   kubernetes.io/metadata.name: openshift-logging
-      exclude:
-        any:
-        - resources:
-            namespaces:
-            - "openshift*"
-            - kyverno
-            - falco
-            - etcd-backup
-            - "kube*"
-            - "vault*"
-            - grafana
-            - keycloak
+    exclude:
+      any:
+      - resources:
+          namespaces:
+          - "openshift*"
+          - kyverno
+          - falco
+          - etcd-backup
+          - "kube*"
+          - "vault*"
+          - grafana
+          - keycloak

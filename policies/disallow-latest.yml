@@ -38,16 +38,15 @@ spec:
         spec:
           containers:
           - image: "!*:latest"
-      exclude:
-        any:
-        - resources:
-            namespaces:
-            - sonar-system
-            - "openshift*"
-            - kyverno
-            - falco
-            - etcd-backup
-            - "kube*"
-            - "vault*"
-            - keycloak
-            - grafana
+    exclude:
+      any:
+      - resources:
+          namespaces:
+          - "openshift*"
+          - kyverno
+          - falco
+          - etcd-backup
+          - "kube*"
+          - "vault*"
+          - grafana
+          - keycloak

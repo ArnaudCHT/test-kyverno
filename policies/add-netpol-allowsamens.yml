@@ -29,15 +29,15 @@ spec:
           ingress:
           - from:
             - podSelector: {}
-      exclude:
-        any:
-        - resources:
-            namespaces:
-            - "openshift*"
-            - kyverno
-            - falco
-            - etcd-backup
-            - "kube*"
-            - "vault*"
-            - grafana
-            - keycloak
+    exclude:
+      any:
+      - resources:
+          namespaces:
+          - "openshift*"
+          - kyverno
+          - falco
+          - etcd-backup
+          - "kube*"
+          - "vault*"
+          - grafana
+          - keycloak
