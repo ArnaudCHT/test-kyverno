@@ -13,7 +13,6 @@ metadata:
       This policy blocks Pod exec commands to Pods in a Namespace called `pci`.
 spec:
   validationFailureAction: Audit
-  background: false
   rules:
   - name: deny-exec-ns-etcd
     match:
