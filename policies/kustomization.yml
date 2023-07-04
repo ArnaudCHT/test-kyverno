@@ -11,10 +11,10 @@ resources:
 # - add-ttl.yml
 # - check-labels.yml
 # - cm-no-credentials.yml
-# - disallow-exec.yml
+ - disallow-exec.yml
 # - disallow-hostpath.yml
 # - disallow-latest.yml
-# - disallow-selfprovisionning.yml
+ - disallow-selfprovisionning.yml
  - etcd.yml
 # - limit-size-pvc.yml
 # - need-containers-ressources.yml
