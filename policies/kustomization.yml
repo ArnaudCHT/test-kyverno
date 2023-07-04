@@ -1,22 +1,22 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-resources: 
-# - add-label.yml
-# - add-netpol-allowsamens.yml
-# - add-netpol-deny.yml
-# - add-netpol-ingress.yml
-# - add-netpol-logging.yml
-# - add-quota.yml
-# - add-ttl.yml
-# - check-labels.yml
-# - cm-no-credentials.yml
- - disallow-exec.yml
-# - disallow-hostpath.yml
-# - disallow-latest.yml
- - disallow-selfprovisionning.yml
- - etcd.yml
-# - limit-size-pvc.yml
-# - need-containers-ressources.yml
-# - restrict-image-registry.yml
-# - restrict-nodeport.yml
+resources:
+- add-label.yml
+- add-netpol-allowsamens.yml
+- add-netpol-deny.yml
+- add-netpol-ingress.yml
+- add-netpol-logging.yml
+- add-quota.yml
+- add-ttl.yml
+- check-labels.yml
+- cm-no-credentials.yml
+- disallow-exec.yml
+- disallow-hostpath.yml
+- disallow-latest.yml
+- disallow-selfprovisionning.yml
+- etcd.yml
+- limit-size-pvc.yml
+- need-containers-ressources.yml
+- restrict-image-registry.yml
+- restrict-nodeport.yml

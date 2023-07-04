@@ -15,6 +15,7 @@ metadata:
       and should not be allowed. This policy ensures no hostPath volumes are in use.
 spec:
   validationFailureAction: Audit
+  background: false
   rules:
     - name: host-path
       match:
