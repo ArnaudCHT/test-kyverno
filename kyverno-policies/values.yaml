@@ -1,0 +1,16 @@
+quota_enabled: true
+
+pvc_limit_size: 1Ti
+
+## La valeurs peux etre egale a Enforce ou Audit
+validationFailureAction: Enforce
+
+
+exclude_Namespaces:
+- "openshift*"
+- "infra*"
+- etcd-backup
+- "kube*"
+- "vault*"
+- keycloak
+- grafana
