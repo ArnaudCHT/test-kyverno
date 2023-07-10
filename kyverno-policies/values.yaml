@@ -8,9 +8,11 @@ quota:
     cpu: 4
     memory: 16Gi
 
+pvc_limit_enabled: true
+
 pvc_limit_size: 1Ti
 
-## La valeurs peux etre egale a Enforce ou Audit
+## La valeurs peut-être egale a Enforce ou Audit
 validationFailureAction: Audit
 
 
