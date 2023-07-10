@@ -1,9 +1,9 @@
-quota_enabled: true
+quota_enabled: false
 
 pvc_limit_size: 1Ti
 
 ## La valeurs peux etre egale a Enforce ou Audit
-validationFailureAction: Enforce
+validationFailureAction: Audit
 
 
 exclude_Namespaces:
