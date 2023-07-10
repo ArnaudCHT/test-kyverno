@@ -25,6 +25,13 @@ spec:
         spec:
           containers:
           - image: "*:*"
+    exclude:
+      any:
+      - resources:
+          namespaces:
+            {{- range .Values.excludedNamespaces }}
+            - "{{ . }}"
+            {{- end }}
   - name: validate-image-tag
     match:
       any:
