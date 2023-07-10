@@ -1,12 +1,20 @@
 quota_enabled: false
 
+quota:
+  request:
+    cpu: 4
+    memory: 16Gi
+  limits:
+    cpu: 4
+    memory: 16Gi
+
 pvc_limit_size: 1Ti
 
 ## La valeurs peux etre egale a Enforce ou Audit
 validationFailureAction: Audit
 
 
-exclude_Namespaces:
+excludedNamespaces:
 - "openshift*"
 - "infra*"
 - etcd-backup

@@ -28,10 +28,10 @@ spec:
       data:
         spec:
           hard:
-            requests.cpu: '4'
-            requests.memory: '16Gi'
-            limits.cpu: '4'
-            limits.memory: '16Gi'
+            requests.cpu: '{{ .Values.quota.request.cpu }}'
+            requests.memory: '{{ .Values.quota.request.memory }}'
+            limits.cpu: '{{ .Values.quota.limits.cpu }}'
+            limits.memory: '{{ .Values.quota.limits.memory }}'
     exclude:
       any:
       - resources:
