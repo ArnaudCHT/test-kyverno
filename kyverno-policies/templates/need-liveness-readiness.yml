@@ -28,7 +28,7 @@ spec:
           - Pod
     preconditions:
       all:
-      - key: '{{"{{request.operation || 'BACKGROUND'}}"}}'
+      - key: "{{`{{ request.operation || 'BACKGROUND' }}`}}"
         operator: AnyIn
         value:
         - CREATE
@@ -42,13 +42,13 @@ spec:
             all:
             - key: livenessProbe
               operator: AllNotIn
-              value: '{{"{{ element.keys(@)[] }}"}}'
+              value: "{{`{{ element.keys(@)[] }}`}}"
             - key: startupProbe
               operator: AllNotIn
-              value: '{{"{{ element.keys(@)[] }}"}}'
+              value: "{{`{{ element.keys(@)[] }}`}}"
             - key: readinessProbe
               operator: AllNotIn
-              value: '{{"{{ element.keys(@)[] }}"}}'
+              value: "{{`{{ element.keys(@)[] }}`}}"
     exclude:
       any:
       - resources:

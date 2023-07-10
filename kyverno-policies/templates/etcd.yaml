@@ -25,9 +25,9 @@ spec:
     validate:
       message: >-
         Encryption should be enabled for etcd
-      deny: 
+      deny:
         conditions:
           all:
-          - key: "{{ keys(request.object.spec) | contains(@, 'encryption') }}"
+          - key: "{{`{{ keys(request.object.spec) | contains(@, 'encryption') }}`}}"
             operator: NotEquals
             value: true

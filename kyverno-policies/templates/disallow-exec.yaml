@@ -23,7 +23,7 @@ spec:
           - Pod/exec
     preconditions:
       all:
-      - key: '{{"{{ request.operation || 'BACKGROUND' }}"}}'
+      - key: "{{`{{ request.operation || 'BACKGROUND' }}`}}"
         operator: Equals
         value: CONNECT
     validate:
@@ -31,6 +31,6 @@ spec:
       deny:
         conditions:
           any:
-          - key: '{{"{{ request.namespace }}"}}'
+          - key: "{{`{{ request.namespace }}`}}"
             operator: Equals
             value: openshift-etcd
