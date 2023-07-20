@@ -12,9 +12,10 @@ spec:
   rules:
   - name: check-successful-jobs-history-limit
     match:
-      resources:
-        kinds:
-        - CronJob
+      any:
+      - resources:
+          kinds:
+            - CronJob
     mutate:
       patchStrategicMerge:
         spec:
@@ -28,9 +29,10 @@ spec:
             {{- end }}
   - name: check-failed-jobs-history-limit
     match:
-      resources:
-        kinds:
-        - CronJob
+      any:
+      - resources:
+          kinds:
+            - CronJob
     mutate:
       patchStrategicMerge:
         spec:
